@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Tchotchke Charity</title>
+
+    <!--Bootstrap-->
+    <link href="scripts/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!--Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+
+    <!--Custom CSS-->
+    <link href="styles/spinner.css" rel="stylesheet">
+
+</head>
+
+<body class="container mar-bot-20">
+<div class="row mar-bot-20">
+    <h1>BNY Mellon wants girls coding!</h1>
+</div>
+
+<div class="row" id="main">
+    <div class="col-xs-12 col-md-3 no-pad">
+        <h4 class="text mar-bot-20">BNY Mellon has partnered with <span class="text-bold">Girls Who Code</span> to donate up to <span class="text-bold">$10,000</span> to keep girls coding! Every applicant who drops off a resume gets to spin the wheel. For every spin of the
+            wheel, BNY Mellon will donate that denomination to <br>Girls Who Code.</h4>
+        <h5 class="text mar-bot-20"><span class="text-bold">Girls Who Code</span> is a national <br>non-profit dedicated to closing the gender gap in technology.</h5>
+        <h2 class="emphasized uppercase mar-top-20 pad-top-50">Take a Spin!</h2>
+    </div>
+    <div class="col-xs-12 col-md-5 left-50 text-center pad-top-50 pad-left-0 pad-right-0 ipad-spinner">
+        <div class="row spinner">
+            <ul class="wheel">
+                <li>
+                    <img src="images/spinnerSlice_1001.png" class="slice"/>
+                </li>
+                <li>
+                    <img src="images/spinnerSlice_101.png" class="slice"/>
+                </li>
+                <li>
+                    <img src="images/spinnerSlice_201.png" class="slice"/>
+                </li>
+                <li>
+                    <img src="images/spinnerSlice_101.png" class="slice"/>
+                </li>
+                <li>
+                    <img src="images/spinnerSlice_501.png" class="slice"/>
+                </li>
+                <li>
+                    <img src="images/spinnerSlice_101.png" class="slice"/>
+                </li>
+                <li>
+                    <img src="images/spinnerSlice_201.png" class="slice"/>
+                </li>
+                <li>
+                    <img src="images/spinnerSlice_101.png" class="slice"/>
+                </li>
+            </ul>
+            <div class="anchor"></div>
+        </div>
+        <div class="row ipad-button">
+            <button class="button" id="spin">SPIN</button>
+        </div>
+
+    </div>
+
+    <div class="col-xs-12 col-md-1 pad-top-50 mar-left-0 pad-left-0">
+        <div id="thermometer" style="margin:0 auto;">
+            <div class="track">
+                <div class="goal">
+
+                </div>
+                <div class="progress">
+                    <div class="amount"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-12 col-md-3 height650 pad-top-50">
+        <div>
+            <h3>Time to reach goal:</h3>
+            <span id="countdown"></span>
+            <h3>Total Progress:</h3>
+            <span id="progress" class="countdown">$0 of $10,000</span>
+        </div>
+    </div>
+</div>
+
+<div class="row mar-top-20 border-top">
+    <div class="col-xs-12 col-sm-4 text-center">
+        <img class="responsive max-width-100 img-height-100" src="images/bnyLogo.png"/>
+    </div>
+    <div class="col-xs-12 col-sm-4 text-center">
+        <img class="responsive max-width-100 img-height-100" src="images/GWC_logo_2016_small_usage.png"/>
+    </div>
+    <div class="col-xs-12 col-sm-4 text-center">
+        <img class="responsive max-width-100 img-height-100" src="images/2015TopCompany.png"/>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12 mar-top-20 mar-bot-20 pad-top-20">
+        <p class="subtitle">The Bank of New York Mellon Corporation will donate up to a maximum of $10,000 to Girls Who Code for every resume collected at our conference booth. Limit 1 spin per individual. </p>
+    </div>
+</div>
+
+<!--Bootstrap-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="scripts/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+
+<!--Velocity.min.js: http://velocityjs.org/-->
+<script type="text/javascript" src="scripts/velocity.min.js"></script>
+
+<!--Custom JS-->
+<script type="text/javascript" src="scripts/spinner.js"></script>
+
+
+</body>
+
+</html>
