@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 var progressAmount = 300;
 var selected;
 
@@ -101,7 +100,6 @@ jQuery(document).ready(function ($) {
         maxWidth: "85%"
     });
 }); // ready
->>>>>>> master
 /********** End spinner functionality adapted from http://jsfiddle.net/090yncuu/5/ ***********/
 
 
