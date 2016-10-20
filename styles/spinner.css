@@ -624,12 +624,20 @@ h3 {
     max-width: 100%;
 }
 
+.progress.initial {
+    height: 3.1% !important;
+}
 
 @media only screen
 and (min-device-width: 768px)
 and (max-device-width: 1024px)
 and (orientation: landscape)
 and (-webkit-min-device-pixel-ratio: 2){
+
+    body {
+        transform: scale(.67);
+        transform-origin: 50% 0%;
+    }
 
     h3, .countdown, #countdown {
         font-size: 20px !important;
