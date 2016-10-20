@@ -1,0 +1,683 @@
+/********* Begin spinner styling adapted from http://jsfiddle.net/090yncuu/5/ **********/
+.hide {
+    display: none;
+}
+
+.spinner {
+    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+    height: 560px;
+    margin: 0 auto 2em;
+    overflow: hidden;
+    position: relative;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+    width: 560px;
+}
+
+.spinner:before {
+    border-style: solid;
+    border-width: 32px 32px 0 32px;
+    border-color: #A29060 transparent transparent transparent;
+    content: "";
+    height: 0;
+    left: 50%;
+    margin-left: -32px;
+    position: absolute;
+    top: 8px;
+    z-index: 100;
+    width: 0;
+}
+
+.spinner .anchor {
+    background-color: white;
+    color: #fff;
+    border: 4px solid #ffffff;
+    -moz-box-shadow: inset 0 -8px 0 #2b2b2b;
+    height: 100px;
+    left: 50%;
+    line-height: 100px;
+    margin: -54px 0 0 -54px;
+    padding: 0;
+    position: absolute;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+    top: 50%;
+    width: 100px;
+}
+
+.spinner .btn:active {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    height: 96px;
+    margin-top: -50px;
+}
+
+.wheel {
+    border: 12px solid #A29060;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    height: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+    text-align: center;
+    width: 100%;
+    -webkit-transform-origin: center center;
+    -moz-transform-origin: center center;
+    -ms-transform-origin: center center;
+    -o-transform-origin: center center;
+    transform-origin: center center;
+}
+
+.wheel li {
+    font-family: "avantgarde_bold", Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    font-size: 1.2rem;
+    height: 50%;
+    line-height: 18px;
+    list-style: none;
+    left: 50%;
+    margin: 0 0 0 -106px;
+    padding: 0;
+    position: absolute;
+    -webkit-transform-origin: center bottom;
+    -moz-transform-origin: center bottom;
+    -ms-transform-origin: center bottom;
+    -o-transform-origin: center bottom;
+    transform-origin: center bottom;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+    top: 0;
+    width: 39.552238806%;
+}
+
+.wheel li:before {
+    display: none;
+}
+
+.wheel a {
+    color: #ffffff;
+    left: 0;
+    position: absolute;
+    text-decoration: none;
+    top: 48px;
+    width: 100%;
+}
+
+.wheel li:nth-child(1) {
+    -webkit-transform: rotate(0);
+    -moz-transform: rotate(0);
+    -ms-transform: rotate(0);
+    -o-transform: rotate(0);
+    transform: rotate(0);
+}
+
+.wheel li:nth-child(2) {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.wheel li:nth-child(3) {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+.wheel li:nth-child(4) {
+    -webkit-transform: rotate(135deg);
+    -moz-transform: rotate(135deg);
+    -ms-transform: rotate(135deg);
+    -o-transform: rotate(135deg);
+    transform: rotate(135deg);
+}
+
+.wheel li:nth-child(5) {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+.wheel li:nth-child(6) {
+    -webkit-transform: rotate(225deg);
+    -moz-transform: rotate(225deg);
+    -ms-transform: rotate(225deg);
+    -o-transform: rotate(225deg);
+    transform: rotate(225deg);
+}
+
+.wheel li:nth-child(7) {
+    -webkit-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+    transform: rotate(270deg);
+}
+
+.wheel li:nth-child(8) {
+    -webkit-transform: rotate(315deg);
+    -moz-transform: rotate(315deg);
+    -ms-transform: rotate(315deg);
+    -o-transform: rotate(315deg);
+    transform: rotate(315deg);
+}
+
+.wheel li:nth-child(odd) img {
+    -webkit-opacity: 0.8;
+    -moz-opacit: 0.8;
+    opacity: 0.8;
+}
+
+.wheel.spin-1 {
+    -webkit-transform: rotate(1350deg);
+    -moz-transform: rotate(1350deg);
+    -ms-transform: rotate(1350deg);
+    -o-transform: rotate(1350deg);
+    transform: rotate(1350deg);
+    -webkit-transition: all 2s;
+    -moz-transition: all 2s;
+    -ms-transition: all 2s;
+    -o-transition: all 2s;
+    transition: all 2s;
+}
+
+.wheel.spin-1 li:nth-child(3) {
+    -webkit-opacity: 0.4;
+    -moz-opacit: 0.4;
+    opacity: 0.4;
+    -webkit-transition: opacity 0.4s 2s;
+    -moz-transition: opacity 0.4s 2s;
+    -ms-transition: opacity 0.4s 2s;
+    -o-transition: opacity 0.4s 2s;
+    transition: opacity 0.4s 2s;
+}
+
+.wheel.spin-2 {
+    -webkit-transform: rotate(1080deg);
+    -moz-transform: rotate(1080deg);
+    -ms-transform: rotate(1080deg);
+    -o-transform: rotate(1080deg);
+    transform: rotate(1080deg);
+    -webkit-transition: all 2s;
+    -moz-transition: all 2s;
+    -ms-transition: all 2s;
+    -o-transition: all 2s;
+    transition: all 2s;
+}
+
+.wheel.spin-2 li:nth-child(6) {
+    -webkit-opacity: 0.4;
+    -moz-opacit: 0.4;
+    opacity: 0.4;
+    -webkit-transition: opacity 0.4s 2s;
+    -moz-transition: opacity 0.4s 2s;
+    -ms-transition: opacity 0.4s 2s;
+    -o-transition: opacity 0.4s 2s;
+    transition: opacity 0.4s 2s;
+}
+
+.wheel.spin-3 {
+    -webkit-transform: rotate(1080deg);
+    -moz-transform: rotate(1080deg);
+    -ms-transform: rotate(1080deg);
+    -o-transform: rotate(1080deg);
+    transform: rotate(1080deg);
+    -webkit-transition: all 2s;
+    -moz-transition: all 2s;
+    -ms-transition: all 2s;
+    -o-transition: all 2s;
+    transition: all 2s;
+}
+
+.wheel.spin-3 li:nth-child(1) {
+    -webkit-opacity: 0.4;
+    -moz-opacit: 0.4;
+    opacity: 0.4;
+    -webkit-transition: opacity 0.4s 2s;
+    -moz-transition: opacity 0.4s 2s;
+    -ms-transition: opacity 0.4s 2s;
+    -o-transition: opacity 0.4s 2s;
+    transition: opacity 0.4s 2s;
+}
+
+.wheel.spin-4 {
+    -webkit-transform: rotate(1080deg);
+    -moz-transform: rotate(1080deg);
+    -ms-transform: rotate(1080deg);
+    -o-transform: rotate(1080deg);
+    transform: rotate(1080deg);
+    -webkit-transition: all 2s;
+    -moz-transition: all 2s;
+    -ms-transition: all 2s;
+    -o-transition: all 2s;
+    transition: all 2s;
+}
+
+.wheel.spin-4 li:nth-child(8) {
+    -webkit-opacity: 0.4;
+    -moz-opacit: 0.4;
+    opacity: 0.4;
+    -webkit-transition: opacity 0.4s 2s;
+    -moz-transition: opacity 0.4s 2s;
+    -ms-transition: opacity 0.4s 2s;
+    -o-transition: opacity 0.4s 2s;
+    transition: opacity 0.4s 2s;
+}
+
+.wheel.spin-5 {
+    -webkit-transform: rotate(1080deg);
+    -moz-transform: rotate(1080deg);
+    -ms-transform: rotate(1080deg);
+    -o-transform: rotate(1080deg);
+    transform: rotate(1080deg);
+    -webkit-transition: all 2s;
+    -moz-transition: all 2s;
+    -ms-transition: all 2s;
+    -o-transition: all 2s;
+    transition: all 2s;
+}
+
+.wheel.spin-5 li:nth-child(2) {
+    -webkit-opacity: 0.4;
+    -moz-opacit: 0.4;
+    opacity: 0.4;
+    -webkit-transition: opacity 0.4s 2s;
+    -moz-transition: opacity 0.4s 2s;
+    -ms-transition: opacity 0.4s 2s;
+    -o-transition: opacity 0.4s 2s;
+    transition: opacity 0.4s 2s;
+}
+
+.wheel.spin-6 {
+    -webkit-transform: rotate(1080deg);
+    -moz-transform: rotate(1080deg);
+    -ms-transform: rotate(1080deg);
+    -o-transform: rotate(1080deg);
+    transform: rotate(1080deg);
+    -webkit-transition: all 2s;
+    -moz-transition: all 2s;
+    -ms-transition: all 2s;
+    -o-transition: all 2s;
+    transition: all 2s;
+}
+
+.wheel.spin-6 li:nth-child(5) {
+    -webkit-opacity: 0.4;
+    -moz-opacit: 0.4;
+    opacity: 0.4;
+    -webkit-transition: opacity 0.4s 2s;
+    -moz-transition: opacity 0.4s 2s;
+    -ms-transition: opacity 0.4s 2s;
+    -o-transition: opacity 0.4s 2s;
+    transition: opacity 0.4s 2s;
+}
+
+.wheel.spin-7 {
+    -webkit-transform: rotate(1080deg);
+    -moz-transform: rotate(1080deg);
+    -ms-transform: rotate(1080deg);
+    -o-transform: rotate(1080deg);
+    transform: rotate(1080deg);
+    -webkit-transition: all 2s;
+    -moz-transition: all 2s;
+    -ms-transition: all 2s;
+    -o-transition: all 2s;
+    transition: all 2s;
+}
+
+.wheel.spin-7 li:nth-child(7) {
+    -webkit-opacity: 0.4;
+    -moz-opacit: 0.4;
+    opacity: 0.4;
+    -webkit-transition: opacity 0.4s 2s;
+    -moz-transition: opacity 0.4s 2s;
+    -ms-transition: opacity 0.4s 2s;
+    -o-transition: opacity 0.4s 2s;
+    transition: opacity 0.4s 2s;
+}
+
+.wheel.spin-8 {
+    -webkit-transform: rotate(1080deg);
+    -moz-transform: rotate(1080deg);
+    -ms-transform: rotate(1080deg);
+    -o-transform: rotate(1080deg);
+    transform: rotate(1080deg);
+    -webkit-transition: all 2s;
+    -moz-transition: all 2s;
+    -ms-transition: all 2s;
+    -o-transition: all 2s;
+    transition: all 2s;
+}
+
+.wheel.spin-8 li:nth-child(4) {
+    -webkit-opacity: 0.4;
+    -moz-opacit: 0.4;
+    opacity: 0.4;
+    -webkit-transition: opacity 0.4s 2s;
+    -moz-transition: opacity 0.4s 2s;
+    -ms-transition: opacity 0.4s 2s;
+    -o-transition: opacity 0.4s 2s;
+    transition: opacity 0.4s 2s;
+}
+
+/********* End spinner functionality adapted from http://jsfiddle.net/090yncuu/5/ **********/
+
+/********* Begin Thermometer styling adapted from Jared Williams (Brightcove) https://jsfiddle.net/jaredwilli/22gLymp9/ **********/
+/* Base thermometer style, this is the slate */
+#thermometer {
+    width: 93px;
+    height: 650px;
+    position: relative;
+    background-image: url("../images/thermometer_bkgd.png");
+    background-size: cover;
+}
+
+/* This represents the track of the thermometer, the linear background
+    with a background size set will generate a line every 5% of the track. */
+#thermometer .track {
+    height: 555px;
+    top: 10px;
+    width: 20px;
+    border: 1px solid #aaa;
+    position: relative;
+    margin: 0 auto;
+    background: rgb(255, 255, 255);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgb(0, 0, 0)), color-stop(1%, rgb(255, 255, 255)));
+    background: -webkit-linear-gradient(top, rgb(0, 0, 0) 0%, rgb(255, 255, 255) 10%);
+    background: -o-linear-gradient(top, rgb(0, 0, 0) 0%, rgb(255, 255, 255) 10%);
+    background: -ms-linear-gradient(top, rgb(0, 0, 0) 0%, rgb(255, 255, 255) 10%);
+    background: -moz-linear-gradient(top, rgb(0, 0, 0) 0%, rgb(255, 255, 255) 10%);
+    background: linear-gradient(to bottom, rgb(0, 0, 0) 0%, rgb(255, 255, 255) 10%);
+    background-position: 0 -1px;
+    background-size: 100% 5%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+/* The progress indicator (the mercury, if you will) */
+#thermometer .progress {
+    height: 0%;
+    width: 100%;
+    background: rgb(20, 140, 148);
+    background: rgba(20, 140, 148, 0.6);
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+/* let's position the goal */
+#thermometer .goal {
+    position: absolute;
+    top: 0;
+}
+
+/* just style the amounts a little bit */
+#thermometer .amount {
+    display: inline-block;
+    padding: 0 5px 0 60px;
+    border-top: 1px solid black;
+    font-family: Trebuchet MS;
+    font-weight: bold;
+    color: #333;
+}
+
+/* make sure the progress amount appears on the left side,
+    this way they progress and goal amounts won't overlap should we reach 100% (or greater) */
+#thermometer .progress .amount {
+    padding: 0 60px 0 5px;
+    position: absolute;
+    border-top: 1px solid #060;
+    color: #060;
+    right: 0;
+}
+
+/********* End Thermometer styling adapted from Jared Williams (Brightcove) https://jsfiddle.net/jaredwilli/22gLymp9/ **********/
+
+/********* Begin Custom CSS **********/
+@media (min-width: 1200px) {
+
+    .container {
+        width: 1400px;
+    }
+
+    .height650 {
+        min-height: 650px;
+    }
+
+}
+
+@font-face {
+    font-family: PublicoBannerBold;
+    src: url('../fonts/PublicoBanner-Bold-Web.woff');
+}
+
+@font-face {
+    font-family: AkkuratLightRegular;
+    src: url('../fonts/lineto-akkurat-light.woff');
+}
+
+@font-face {
+    font-family: AkkuratProBold;
+    src: url('../fonts/lineto-akkurat-bold.woff');
+}
+
+body {
+    background-color: #FFF;
+    color: #000;
+}
+
+h1 {
+    font-family: PublicoBannerBold;
+    font-size: 42px;
+    color: #000000;
+}
+
+h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    color: #A29060;
+}
+
+.img-height-100 {
+    max-height: 100px;
+}
+
+#countdown, .countdown {
+    color: #4B4B4B;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.emphasized {
+    font-family: AkkuratProBold;
+    font-size: 30px;
+    color: #A29060;
+}
+
+.text {
+    font-family: AkkuratLightRegular;
+    font-size: 21px;
+    line-height: 30px;
+}
+
+.text-bold {
+    font-family: AkkuratProBold;
+}
+
+#countdown, .countdown {
+    font-size: 24px;
+}
+
+.left-50 {
+    position: relative;
+    left: -50px;
+}
+
+.subtitle {
+    color: #CCCCCC;
+    font-size: 16px;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.border-top {
+    border-top: 1px solid #CCC;
+    padding-top: 20px;
+}
+
+.border-right {
+    border-right: 3px solid #000;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.button {
+    width: 500px;
+    height: 50px;
+    background-color: #A29060;
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    border: none;
+    color: #FFF;
+}
+
+.mar-auto {
+    margin: 0 auto;
+}
+
+.mar-left-0 {
+    margin-left: 0;
+}
+
+.mar-bot-20 {
+    margin-bottom: 20px;
+}
+
+.mar-left-20 {
+    margin-left: 20px;
+}
+
+.mar-top-20 {
+    margin-top: 20px;
+}
+
+.no-mar {
+    margin: 0;
+}
+
+.no-pad {
+    padding: 0;
+}
+
+.pad-left-0 {
+    padding-left: 0;
+}
+
+.pad-right-0 {
+    padding-right: 0;
+}
+
+.pad-top-20 {
+    padding-top: 20px;
+}
+
+.pad-top-50 {
+    padding-top: 50px;
+}
+
+.vertical {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.text-center {
+    text-align: center;
+}
+
+#main {
+    height: 700px;
+}
+
+.max-width-100 {
+    max-width: 100%;
+}
+
+.progress.initial {
+    height: 3.1% !important;
+}
+
+
+@media only screen
+and (min-device-width: 768px)
+and (max-device-width: 1024px)
+and (orientation: landscape)
+and (-webkit-min-device-pixel-ratio: 2){
+
+    body {
+        transform: scale(.67);
+        transform-origin: 50% 0%;
+    }
+
+    h3, .countdown, #countdown {
+        font-size: 20px !important;
+    }
+
+    h4 {
+        font-size: 16px !important;
+        padding-right: 15px !important;
+    }
+
+    h5 {
+        font-size: 14px !important;
+        padding-right: 50px;
+    }
+
+    .height650 {
+        padding-top: 0 !important;
+    }
+
+    .ipad-spinner {
+        padding-left: 10px;
+    }
+
+    .ipad-button {
+        padding-left: 50px;
+    }
+
+    #thermometer {
+        width: 57px !important;
+        height: 400px !important;
+        position: absolute;
+        left: 190px;
+        top: 200px;
+    }
+
+    #thermometer .track {
+        height: 345px !important;
+    }
+
+}
+
+/********* End Custom CSS **********/
