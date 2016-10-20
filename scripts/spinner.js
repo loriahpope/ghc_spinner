@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 var progressAmount = 300;
+=======
+var progressAmount = 0;
+>>>>>>> master
 var selected;
 
 /********** Begin spinner functionality adapted from http://jsfiddle.net/090yncuu/5/ ***********/
@@ -11,8 +15,13 @@ function ordRandom() {
     return _deg = _deg + ((Math.floor(Math.random() * (8 - 1 + 1))) * 45) + 1080;
 }
 
+<<<<<<< HEAD
 // jQuery(document).ready(function ($) {
     $(document).on("click", "#spin", function(e) {
+=======
+jQuery(document).ready(function ($) {
+    $("#spin").on("click", function (e) {
+>>>>>>> master
         // select algorithm sequential, random or preset :
         // if random order, don't repeat the same
         _repeatRandom = _index.length != 0;
@@ -24,7 +33,11 @@ function ordRandom() {
             if (_inArray > -1) {
                 // target is in the array
                 _repeatRandom = false; // break while loop
+<<<<<<< HEAD
                 //_index.splice(_inArray, 1); // remove segment from array so it won't be repeated
+=======
+                _index.splice(_inArray, 1); // remove segment from array so it won't be repeated
+>>>>>>> master
 
                 // start animation
                 // reset opacity of all segments to 1
@@ -49,6 +62,7 @@ function ordRandom() {
                                         console.log("target: " + _target);
                                         switch (_target) {
                                             case 0:
+<<<<<<< HEAD
                                                 selected = 50;
                                                 console.log("case 0");
                                                 break;
@@ -79,6 +93,30 @@ function ordRandom() {
                                             case 7:
                                                 selected = 5;
                                                 console.log("case 7");
+=======
+                                                selected = 10;
+                                                break;
+                                            case 1:
+                                                selected = 1;
+                                                break;
+                                            case 2:
+                                                selected = 2;
+                                                break;
+                                            case 3:
+                                                selected = 1;
+                                                break;
+                                            case 4:
+                                                selected = 5;
+                                                break;
+                                            case 5:
+                                                selected = 1;
+                                                break;
+                                            case 6:
+                                                selected = 2;
+                                                break;
+                                            case 7:
+                                                selected = 1;
+>>>>>>> master
                                         }
                                         progressAmount += selected;
                                         console.log("selected: " + selected);
@@ -101,7 +139,11 @@ function ordRandom() {
     $(".slice").slice({
         maxWidth: "85%"
     });
+<<<<<<< HEAD
 // }); // ready
+=======
+}); // ready
+>>>>>>> master
 /********** End spinner functionality adapted from http://jsfiddle.net/090yncuu/5/ ***********/
 
 
@@ -145,6 +187,10 @@ function thermometer(goalAmount, progressAmount, animate) {
         percentageAmount;
 
     //work out our numbers
+<<<<<<< HEAD
+=======
+    debugger;
+>>>>>>> master
     goalAmount = goalAmount || parseFloat($goal.text()),
         // progressAmount = progressAmount || parseFloat( $progress.text() ),
         percentageAmount = Math.min(Math.round(progressAmount / goalAmount * 1000) / 10, 100); //make sure we have 1 decimal point
@@ -158,7 +204,10 @@ function thermometer(goalAmount, progressAmount, animate) {
     $progress.find(".amount").hide();
 
     if (animate !== false) {
+<<<<<<< HEAD
         $(document.getElementsByClassName("initial")).removeClass("initial");
+=======
+>>>>>>> master
         $progress.animate({
             "height": percentageAmount + "%"
         }, 1200, function () {
