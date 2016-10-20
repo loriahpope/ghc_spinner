@@ -1,4 +1,4 @@
-var progressAmount = 300;
+var progressAmount = 700;
 var selected;
 
 /********** Begin spinner functionality adapted from http://jsfiddle.net/090yncuu/5/ ***********/
