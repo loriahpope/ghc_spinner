@@ -51,7 +51,7 @@ jQuery(document).ready(function ($) {
                                                 console.log("case 0");
                                                 break;
                                             case 1:
-                                                selected = 5;
+                                                selected = 20;
                                                 console.log("case 1");
                                                 break;
                                             case 2:
